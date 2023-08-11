@@ -1,0 +1,15 @@
+ // appBar: AppBar(backgroundColor: Color.fromARGB(255, 243, 217, 123),
+      // title: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //       children: [
+      //         // Text('quiz!',
+      //         //   style: GoogleFonts.montserrat(  fontSize: 20, fontWeight: FontWeight.w400, color: Color.fromARGB(255, 39, 105, 192))),
+
+      //         Container(
+      //             // ignore: sort_child_properties_last
+      //             child:
+      //             Image.asset ("images/logo4.png") ,
+      //             width: 80
+      //         ),
+      //         ],
+      //         ),
+      //         ),

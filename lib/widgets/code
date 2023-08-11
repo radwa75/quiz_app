@@ -1,0 +1,210 @@
+  int _currentIndex = 0;
+  int _score = 0;
+
+  final List<Map<String, dynamic>> _questions = [
+    
+    {
+      'category': 'math',
+      'question': 'What is 2 + 2?',
+      'options': ['2', '3', '4', '5'],
+      'answer': '4',
+    },
+    {
+      'category': 'math',
+      'question': 'What is the square root of 64?',
+      'options': ['6', '8', '10', '12'],
+      'answer': '8',
+    },
+    {
+      'category': 'math',
+      'question': 'What is the formula for the area of a circle?',
+      'options': ['πr^2', '2πr', 'πd', '2πd'],
+      'answer': 'πr^2',
+    },
+    {
+      'category': 'math',
+      'question':
+          'What is the equation of a line with slope 2 and y-intercept 3?',
+      'options': ['y = 2x + 3', 'y = 3x + 2', 'y = -2x + 3', 'y = -3x + 2'],
+      'answer': 'y = 2x + 3',
+    },
+    {
+      'category': 'math',
+      'question': 'What is the value of x in the equation 2x + 4 = 10?',
+      'options': ['2', '3', '4', '5'],
+      'answer': '3',
+    },
+    
+    {
+      'category': 'sport',
+      'question': 'Which country won the 2018 FIFA World Cup?',
+      'options': ['Germany', 'Brazil', 'France', 'Spain'],
+      'answer': 'France',
+    },
+    {
+      'category': 'sport',
+      'question': 'Which athlete has won the most Olympic gold medals?',
+      'options': [
+        'Michael Phelps',
+        'Usain Bolt',
+        'Carl Lewis',
+        'Larisa Latynina'
+      ],
+      'answer': 'Michael Phelps',
+    },
+    {
+      'category': 'sport',
+      'question': 'What is the oldest tennis tournament in the world?',
+      'options': ['US Open', 'Wimbledon', 'French Open', 'Australian Open'],
+      'answer': 'Wimbledon',
+    },
+    {
+      'category': 'sport',
+      'question': 'Which basketball player has won the most NBA championships?',
+      'options': [
+        'Kareem Abdul-Jabbar',
+        'Michael Jordan',
+        'Bill Russell',
+        'Magic Johnson'
+      ],
+      'answer': 'Bill Russell',
+    },
+    {
+      'category': 'sport',
+      'question': 'Which team has won the most Super Bowls?',
+      'options': [
+        'Dallas Cowboys',
+        'Pittsburgh Steelers',
+        'New England Patriots',
+        'San Francisco 49ers'
+      ],
+      'answer': 'Pittsburgh Steelers',
+    },
+   
+    {
+      'category': 'history',
+      'question': 'In what year did World War II end?',
+      'options': ['1942', '1944', '1945', '1946'],
+      'answer': '1945',
+    },
+    {
+      'category': 'history',
+      'question': 'Who assassinated US President John F. Kennedy?',
+      'options': [
+        'Lee Harvey Oswald',
+        'Jack Ruby',
+        'John Wilkes Booth',
+        'James Earl Ray'
+      ],
+      'answer': 'Lee Harvey Oswald',
+    },
+    {
+      'category': 'history',
+      'question':
+          'Who was the first female Prime Minister of the United Kingdom?',
+      'options': [
+        'Margaret Thatcher',
+        'Theresa May',
+        'Angela Merkel',
+        'Hillary Clinton'
+      ],
+      'answer': 'Margaret Thatcher',
+    },
+    {
+      'category': 'history',
+      'question': 'Who was the first person to circumnavigate the globe?',
+      'options': [
+        'Ferdinand Magellan',
+        'Christopher Columbus',
+        'Francis Drake',
+        'James Cook'
+      ],
+      'answer': 'Ferdinand Magellan',
+    },
+    {
+      'category': 'history',
+      'question': 'In what year did the Berlin Wall fall?',
+      'options': ['1987', '1989', '1991', '1993'],
+      'answer': '1989',
+    },
+   
+    {
+      'category': 'chemistry',
+      'question': 'What is the most abundant gas in the Earth’s atmosphere?',
+      'options': ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Argon'],
+      'answer': 'Nitrogen',
+    },
+    {
+      'category': 'chemistry',
+      'question': 'What is the chemical symbol for water?',
+      'options': ['H2O', 'CO2', 'NaCl', 'O2'],
+      'answer': 'H2O',
+    },
+    {
+      'category': 'chemistry',
+      'question': 'What is the pH of a neutral solution?',
+      'options': ['7', '0', '14', '1'],
+      'answer': '7',
+    },
+    {
+      'category': 'chemistry',
+      'question': 'What is the chemical formula for table salt?',
+      'options': ['NaCl', 'HCl', 'KCl', 'CaCl2'],
+      'answer': 'NaCl',
+    },
+    {
+      'category': 'chemistry',
+      'question': 'What element has the symbol Fe?',
+      'options': ['Gold', 'Iron', 'Silver', 'Copper'],
+      'answer': 'Iron',
+    },
+    // Geography questions
+    {
+      'category': 'geography',
+      'question': 'What is the capital of Brazil?',
+      'options': ['Rio de Janeiro', 'Brasília', 'São Paulo', 'Salvador'],
+      'answer': 'Brasília',
+    },
+    {
+      'category': 'geography',
+      'question': 'What is the highest mountain in Africa?',
+      'options': [
+        'Mount Kilimanjaro',
+        'Mount Everest',
+        'Mount Aconcagua',
+        'Mount Denali'
+      ],
+      'answer': 'Mount Kilimanjaro',
+    },
+    {
+      'category': 'geography',
+      'question': 'What is the largest country by area in South America?',
+      'options': ['Brazil', 'Argentina', 'Peru', 'Colombia'],
+      'answer': 'Brazil',
+    },
+    {
+      'category': 'geography',
+      'question': 'What is the capital of Australia?',
+      'options': ['Sydney', 'Melbourne', 'Canberra', 'Brisbane'],
+      'answer': 'Canberra',
+    },
+    {
+      'category': 'geography',
+      'question': 'What is the largest desert in the world?',
+      'options': ['Sahara', 'Arabian', 'Gobi', 'Antarctica'],
+      'answer': 'Antarctica',
+    }
+  ];
+
+  List<Map<String, dynamic>> _getQuestionsByCategory(String category) {
+    return _questions
+        .where((question) => question['category'] == category)
+        .toList();
+  }
+
+  void _onAnswerSelected(String answer) {
+    if (answer == _questions[_currentIndex]['answer']) {
+      setState(() {
+        _score++;
+      });
+    }
